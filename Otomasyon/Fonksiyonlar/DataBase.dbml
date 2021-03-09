@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Otomasyon" Class="DataBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ALFA-BILGISAYAR;Initial Catalog=Otomasyon;Integrated Security=True" SettingsObjectName="Otomasyon.Properties.Settings" SettingsPropertyName="OtomasyonConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_Stok" Member="Tbl_Stoks">
+    <Type Name="Tbl_Stok">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StokBarkod" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="StokKodu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="StokAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StokBirim" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="StokAlisFiyati" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="StokSatiFiyati" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="StokAlisKdv" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="StokSatisKdv" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="StokGrupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StokResim" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="StokSaveUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StokSaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StokEditUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StokEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_StokGruplari" Member="Tbl_StokGruplaris">
+    <Type Name="Tbl_StokGruplari">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GurupAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GrupKodu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GrupSaveUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GrupSaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GrupEditUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GrupEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_CariGuruplaris" Member="Tbl_CariGuruplaris">
+    <Type Name="Tbl_CariGuruplari">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GrupAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GrupKodu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SaveDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SaveUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EditUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Carilers" Member="TBL_Carilers">
+    <Type Name="TBL_Cariler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CariKodu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CariAdi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VergiDairesi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VergiNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GrupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ulke" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sehir" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="WebAdresi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MailInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Yetkili1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="YetkiliEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Yetkili" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YetkiliMail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telefon1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Telefon2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Fax1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SaveUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
