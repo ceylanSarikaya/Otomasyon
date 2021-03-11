@@ -208,7 +208,11 @@ namespace Otomasyon.Modul_Cari
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCariGruplar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCariGruplar";
             this.Load += new System.EventHandler(this.FrmCariGruplar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();

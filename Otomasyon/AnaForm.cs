@@ -53,22 +53,22 @@ namespace Otomasyon
 
         private void btnCariAcilisKarti_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            formlar.CariAcilisKarti();
         }
 
         private void btnCariGruplar_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            formlar.CariGruplari();
         }
 
         private void btnCariListeler_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            formlar.CariListesi();
         }
 
         private void btnCariHareketler_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            
         }
     }
 }

@@ -44,9 +44,9 @@ namespace Otomasyon.Modul_Cari
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.StokKodu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.StokAdi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.StokBarkod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CariKodu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CariAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CariBarkod = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -176,14 +176,15 @@ namespace Otomasyon.Modul_Cari
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ID,
-            this.StokKodu,
-            this.StokAdi,
-            this.StokBarkod});
+            this.CariKodu,
+            this.CariAdi,
+            this.CariBarkod});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -194,38 +195,38 @@ namespace Otomasyon.Modul_Cari
             this.ID.FieldName = "ID";
             this.ID.Name = "ID";
             // 
-            // StokKodu
+            // CariKodu
             // 
-            this.StokKodu.Caption = "StokKodu";
-            this.StokKodu.FieldName = "StokKodu";
-            this.StokKodu.Name = "StokKodu";
-            this.StokKodu.OptionsColumn.AllowEdit = false;
-            this.StokKodu.OptionsColumn.AllowFocus = false;
-            this.StokKodu.OptionsColumn.FixedWidth = true;
-            this.StokKodu.Visible = true;
-            this.StokKodu.VisibleIndex = 0;
+            this.CariKodu.Caption = "CariKodu";
+            this.CariKodu.FieldName = "CariKodu";
+            this.CariKodu.Name = "CariKodu";
+            this.CariKodu.OptionsColumn.AllowEdit = false;
+            this.CariKodu.OptionsColumn.AllowFocus = false;
+            this.CariKodu.OptionsColumn.FixedWidth = true;
+            this.CariKodu.Visible = true;
+            this.CariKodu.VisibleIndex = 0;
             // 
-            // StokAdi
+            // CariAdi
             // 
-            this.StokAdi.Caption = "StokAdi";
-            this.StokAdi.FieldName = "StokAdi";
-            this.StokAdi.Name = "StokAdi";
-            this.StokAdi.OptionsColumn.AllowEdit = false;
-            this.StokAdi.OptionsColumn.AllowFocus = false;
-            this.StokAdi.OptionsColumn.FixedWidth = true;
-            this.StokAdi.Visible = true;
-            this.StokAdi.VisibleIndex = 1;
+            this.CariAdi.Caption = "CariAdi";
+            this.CariAdi.FieldName = "CariAdi";
+            this.CariAdi.Name = "CariAdi";
+            this.CariAdi.OptionsColumn.AllowEdit = false;
+            this.CariAdi.OptionsColumn.AllowFocus = false;
+            this.CariAdi.OptionsColumn.FixedWidth = true;
+            this.CariAdi.Visible = true;
+            this.CariAdi.VisibleIndex = 1;
             // 
-            // StokBarkod
+            // CariBarkod
             // 
-            this.StokBarkod.Caption = "StokBarkod";
-            this.StokBarkod.FieldName = "StokBarkod";
-            this.StokBarkod.Name = "StokBarkod";
-            this.StokBarkod.OptionsColumn.AllowEdit = false;
-            this.StokBarkod.OptionsColumn.AllowFocus = false;
-            this.StokBarkod.OptionsColumn.FixedWidth = true;
-            this.StokBarkod.Visible = true;
-            this.StokBarkod.VisibleIndex = 2;
+            this.CariBarkod.Caption = "CariBarkod";
+            this.CariBarkod.FieldName = "CariBarkod";
+            this.CariBarkod.Name = "CariBarkod";
+            this.CariBarkod.OptionsColumn.AllowEdit = false;
+            this.CariBarkod.OptionsColumn.AllowFocus = false;
+            this.CariBarkod.OptionsColumn.FixedWidth = true;
+            this.CariBarkod.Visible = true;
+            this.CariBarkod.VisibleIndex = 2;
             // 
             // FrmCariListeler
             // 
@@ -273,8 +274,8 @@ namespace Otomasyon.Modul_Cari
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn ID;
-        private DevExpress.XtraGrid.Columns.GridColumn StokKodu;
-        private DevExpress.XtraGrid.Columns.GridColumn StokAdi;
-        private DevExpress.XtraGrid.Columns.GridColumn StokBarkod;
+        private DevExpress.XtraGrid.Columns.GridColumn CariKodu;
+        private DevExpress.XtraGrid.Columns.GridColumn CariAdi;
+        private DevExpress.XtraGrid.Columns.GridColumn CariBarkod;
     }
 }

@@ -29,16 +29,17 @@ namespace Otomasyon.Modul_Cari
         {
             try
             {
+
                 Fonksiyonlar.Tbl_CariGuruplari guruplari = new Fonksiyonlar.Tbl_CariGuruplari();
                 guruplari.GrupAdi = txtGrupAdi.Text;
                 guruplari.GrupKodu = txtGrupKodu.Text;
                 guruplari.SaveDate = DateTime.Now;
+                guruplari.EditDate = DateTime.Now;
                 guruplari.SaveUser = AnaForm.UserId;
                 dataContext.Tbl_CariGuruplaris.InsertOnSubmit(guruplari);
                 dataContext.SubmitChanges();
                 mesajlar.YeniKayit("Yeni cari grup kaydı oluşturuldu");
                 Temizle();
-
             }
             catch (Exception e)
             {
@@ -51,6 +52,8 @@ namespace Otomasyon.Modul_Cari
 
             try
             {
+               
+
                 Fonksiyonlar.Tbl_CariGuruplari guruplari = dataContext.Tbl_CariGuruplaris.First(s => s.Id == SecimId);
                 guruplari.GrupAdi = txtGrupAdi.Text;
                 guruplari.GrupKodu = txtGrupKodu.Text;
@@ -70,7 +73,11 @@ namespace Otomasyon.Modul_Cari
         {
             try
             {
+                Edit = true;
                 SecimId = int.Parse(gridView1.GetFocusedRowCellValue("Id").ToString());
+                txtGrupAdi.Text = gridView1.GetFocusedRowCellValue("GrupAdi").ToString();
+                txtGrupKodu.Text = gridView1.GetFocusedRowCellValue("GrupKodu").ToString();
+
             }
             catch (Exception)
             {
@@ -92,15 +99,31 @@ namespace Otomasyon.Modul_Cari
                       select s;
             Liste.DataSource = lst;
         }
+        void Sil()
+        {
+            try
+            {
+                dataContext.Tbl_CariGuruplaris.DeleteOnSubmit(dataContext.Tbl_CariGuruplaris.First(s => s.Id == SecimId));
+                dataContext.SubmitChanges();
+                Temizle();
+            }
+            catch (Exception e)
+            {
+                mesajlar.Hata(e);
+               
+            }
+        }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-
+            if (Edit && SecimId > 0 && mesajlar.Guncelle() == DialogResult.Yes) Guncelle();
+            else YeniKaydet();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-
+            if (Edit && SecimId > 0 && mesajlar.Sil() == DialogResult.Yes) Sil() ;
+          
         }
 
         private void btnKapat_Click(object sender, EventArgs e)

@@ -26,5 +26,21 @@ namespace Otomasyon.Fonksiyonlar
                 return "0000001";
             }
         }
+        public string CariKodNumarasi()
+        {
+            try
+            {
+                int Numaralar = int.Parse((from s in Db.TBL_Carilers
+                                           orderby s.Id descending
+                                           select s).First().CariKodu);
+                Numaralar++;
+                string Num = Numaralar.ToString().PadLeft(7, '0');
+                return Num;
+            }
+            catch (Exception)
+            {
+                return "0000001";
+            }
+        }
     }
 }

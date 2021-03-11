@@ -70,6 +70,30 @@
     <Compile Include="Fonksiyonlar\Mesajlar.cs" />
     <Compile Include="Fonksiyonlar\Numaralar.cs" />
     <Compile Include="Fonksiyonlar\Resimler.cs" />
+    <Compile Include="Modul_Banka\FrmBankaHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmBankaHareketleri.Designer.cs">
+      <DependentUpon>FrmBankaHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmBankaIsleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmBankaIsleri.Designer.cs">
+      <DependentUpon>FrmBankaIsleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmParaTransferi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmParaTransferi.Designer.cs">
+      <DependentUpon>FrmParaTransferi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmBankaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmBankaListesi.Designer.cs">
+      <DependentUpon>FrmBankaListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modul_Cari\FrmCariAcilisKarti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +117,78 @@
     </Compile>
     <Compile Include="Modul_Cari\FrmCariListeler.Designer.cs">
       <DependentUpon>FrmCariListeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmBankaAcilisKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\FrmBankaAcilisKarti.Designer.cs">
+      <DependentUpon>FrmBankaAcilisKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmAlisFaturasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmAlisFaturasi.Designer.cs">
+      <DependentUpon>FrmAlisFaturasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmAlisIadeFaturasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmAlisIadeFaturasi.Designer.cs">
+      <DependentUpon>FrmAlisIadeFaturasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmAlisIrsaliyesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmAlisIrsaliyesi.Designer.cs">
+      <DependentUpon>FrmAlisIrsaliyesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmFaturaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmFaturaListesi.Designer.cs">
+      <DependentUpon>FrmFaturaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmSatisFaturasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmSatisFaturasi.Designer.cs">
+      <DependentUpon>FrmSatisFaturasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmSatisIadeFaturasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmSatisIadeFaturasi.Designer.cs">
+      <DependentUpon>FrmSatisIadeFaturasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmSatisIrsaliyesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\FrmSatisIrsaliyesi.Designer.cs">
+      <DependentUpon>FrmSatisIrsaliyesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_kasa\FrmKasaAcilisKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_kasa\FrmKasaAcilisKarti.Designer.cs">
+      <DependentUpon>FrmKasaAcilisKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_kasa\FrmKasaDevri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_kasa\FrmKasaDevri.Designer.cs">
+      <DependentUpon>FrmKasaDevri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_kasa\FrmKasaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_kasa\FrmKasaListesi.Designer.cs">
+      <DependentUpon>FrmKasaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_kasa\FrmKasaTahsilatOdeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_kasa\FrmKasaTahsilatOdeme.Designer.cs">
+      <DependentUpon>FrmKasaTahsilatOdeme.cs</DependentUpon>
     </Compile>
     <Compile Include="Modul_Stok\FrmStokGruplari.cs">
       <SubType>Form</SubType>
@@ -123,6 +219,21 @@
     <EmbeddedResource Include="AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\FrmBankaAcilisKarti.resx">
+      <DependentUpon>FrmBankaAcilisKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\FrmBankaHareketleri.resx">
+      <DependentUpon>FrmBankaHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\FrmBankaIsleri.resx">
+      <DependentUpon>FrmBankaIsleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\FrmParaTransferi.resx">
+      <DependentUpon>FrmParaTransferi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\FrmBankaListesi.resx">
+      <DependentUpon>FrmBankaListesi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modul_Cari\FrmCariAcilisKarti.resx">
       <DependentUpon>FrmCariAcilisKarti.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +242,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Cari\FrmCariListeler.resx">
       <DependentUpon>FrmCariListeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Fatura\FrmFaturaListesi.resx">
+      <DependentUpon>FrmFaturaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Fatura\FrmSatisFaturasi.resx">
+      <DependentUpon>FrmSatisFaturasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_kasa\FrmKasaAcilisKarti.resx">
+      <DependentUpon>FrmKasaAcilisKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_kasa\FrmKasaDevri.resx">
+      <DependentUpon>FrmKasaDevri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_kasa\FrmKasaListesi.resx">
+      <DependentUpon>FrmKasaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_kasa\FrmKasaTahsilatOdeme.resx">
+      <DependentUpon>FrmKasaTahsilatOdeme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Stok\FrmStokGruplari.resx">
       <DependentUpon>FrmStokGruplari.cs</DependentUpon>
@@ -176,7 +305,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\kasa.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stok-yonetimi-nedir-nasil-yapilir.jpg" />
   </ItemGroup>

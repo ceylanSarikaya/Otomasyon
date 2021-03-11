@@ -93,6 +93,16 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kasa {
+            get {
+                object obj = ResourceManager.GetObject("kasa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stok {
             get {
                 object obj = ResourceManager.GetObject("stok", resourceCulture);
