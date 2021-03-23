@@ -42,5 +42,22 @@ namespace Otomasyon.Fonksiyonlar
                 return "0000001";
             }
         }
+        public string KasaKodNumarasi()
+        {
+            try
+            {
+                int Numaralar = int.Parse((from s in Db.TBL_Kasalars
+                                           orderby s.Id descending
+                                           select s).First().KasaKodu);
+                Numaralar++;
+                string Num = Numaralar.ToString().PadLeft(7, '0');
+                return Num;
+            }
+            catch (Exception)
+            {
+                return "0000001";
+            }
+        }
+
     }
 }

@@ -34,8 +34,8 @@ namespace Otomasyon.Modul_kasa
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.BankaAdi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HesapTuru = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.KasaKodu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.KasaAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Bakiye = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
@@ -48,6 +48,7 @@ namespace Otomasyon.Modul_kasa
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.Aciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -85,12 +86,14 @@ namespace Otomasyon.Modul_kasa
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Id,
-            this.BankaAdi,
-            this.HesapTuru,
-            this.Bakiye});
+            this.KasaKodu,
+            this.KasaAdi,
+            this.Bakiye,
+            this.Aciklama});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // Id
             // 
@@ -98,26 +101,26 @@ namespace Otomasyon.Modul_kasa
             this.Id.FieldName = "Id";
             this.Id.Name = "Id";
             // 
-            // BankaAdi
+            // KasaKodu
             // 
-            this.BankaAdi.Caption = "BankaAdi";
-            this.BankaAdi.FieldName = "BankaAdi";
-            this.BankaAdi.Name = "BankaAdi";
-            this.BankaAdi.OptionsColumn.AllowEdit = false;
-            this.BankaAdi.OptionsColumn.AllowFocus = false;
-            this.BankaAdi.Visible = true;
-            this.BankaAdi.VisibleIndex = 0;
+            this.KasaKodu.Caption = "KasaKodu";
+            this.KasaKodu.FieldName = "KasaKodu";
+            this.KasaKodu.Name = "KasaKodu";
+            this.KasaKodu.OptionsColumn.AllowEdit = false;
+            this.KasaKodu.OptionsColumn.AllowFocus = false;
+            this.KasaKodu.Visible = true;
+            this.KasaKodu.VisibleIndex = 0;
             // 
-            // HesapTuru
+            // KasaAdi
             // 
-            this.HesapTuru.Caption = "HesapTuru";
-            this.HesapTuru.FieldName = "HesapTuru";
-            this.HesapTuru.Name = "HesapTuru";
-            this.HesapTuru.OptionsColumn.AllowEdit = false;
-            this.HesapTuru.OptionsColumn.AllowFocus = false;
-            this.HesapTuru.OptionsColumn.FixedWidth = true;
-            this.HesapTuru.Visible = true;
-            this.HesapTuru.VisibleIndex = 1;
+            this.KasaAdi.Caption = "KasaAdi";
+            this.KasaAdi.FieldName = "KasaAdi";
+            this.KasaAdi.Name = "KasaAdi";
+            this.KasaAdi.OptionsColumn.AllowEdit = false;
+            this.KasaAdi.OptionsColumn.AllowFocus = false;
+            this.KasaAdi.OptionsColumn.FixedWidth = true;
+            this.KasaAdi.Visible = true;
+            this.KasaAdi.VisibleIndex = 1;
             // 
             // Bakiye
             // 
@@ -190,6 +193,7 @@ namespace Otomasyon.Modul_kasa
             this.btnKaydet.Size = new System.Drawing.Size(87, 42);
             this.btnKaydet.TabIndex = 0;
             this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnSil
             // 
@@ -199,6 +203,7 @@ namespace Otomasyon.Modul_kasa
             this.btnSil.Size = new System.Drawing.Size(87, 42);
             this.btnSil.TabIndex = 0;
             this.btnSil.Text = "Sil";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnKapat
             // 
@@ -208,6 +213,7 @@ namespace Otomasyon.Modul_kasa
             this.btnKapat.Size = new System.Drawing.Size(87, 42);
             this.btnKapat.TabIndex = 0;
             this.btnKapat.Text = "Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // groupControl1
             // 
@@ -227,6 +233,12 @@ namespace Otomasyon.Modul_kasa
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Banka Bilgileri";
             // 
+            // Aciklama
+            // 
+            this.Aciklama.Caption = "Aciklama";
+            this.Aciklama.FieldName = "Aciklama";
+            this.Aciklama.Name = "Aciklama";
+            // 
             // FrmKasaAcilisKarti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +253,7 @@ namespace Otomasyon.Modul_kasa
             this.Name = "FrmKasaAcilisKarti";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kasa Acilis Karti";
+            this.Load += new System.EventHandler(this.FrmKasaAcilisKarti_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -261,8 +274,8 @@ namespace Otomasyon.Modul_kasa
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn Id;
-        private DevExpress.XtraGrid.Columns.GridColumn BankaAdi;
-        private DevExpress.XtraGrid.Columns.GridColumn HesapTuru;
+        private DevExpress.XtraGrid.Columns.GridColumn KasaKodu;
+        private DevExpress.XtraGrid.Columns.GridColumn KasaAdi;
         private DevExpress.XtraGrid.Columns.GridColumn Bakiye;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.MemoEdit txtAciklama;
@@ -275,5 +288,6 @@ namespace Otomasyon.Modul_kasa
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraGrid.Columns.GridColumn Aciklama;
     }
 }

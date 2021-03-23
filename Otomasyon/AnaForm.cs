@@ -70,5 +70,25 @@ namespace Otomasyon
         {
             
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formlar.KasaKarti();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formlar.KasaListesi();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formlar.KasAc();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formlar.KasTahsilatOdemeKarti();
+        }
     }
 }

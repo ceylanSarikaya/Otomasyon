@@ -44,23 +44,23 @@ namespace Otomasyon.Modul_kasa
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtAcıklama = new DevExpress.XtraEditors.MemoEdit();
             this.txtTarih = new DevExpress.XtraEditors.DateEdit();
-            this.txtMakbuzNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.rbtGirisIslemi = new System.Windows.Forms.RadioButton();
             this.rbtCikisIslemi = new System.Windows.Forms.RadioButton();
+            this.rbtGirisIslemi = new System.Windows.Forms.RadioButton();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtMakbuzNo = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKasaKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKasaAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTutar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcıklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarih.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMakbuzNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMakbuzNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnKapat
@@ -71,6 +71,7 @@ namespace Otomasyon.Modul_kasa
             this.btnKapat.Size = new System.Drawing.Size(87, 35);
             this.btnKapat.TabIndex = 5;
             this.btnKapat.Text = "Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // btnKaydet
             // 
@@ -80,6 +81,7 @@ namespace Otomasyon.Modul_kasa
             this.btnKaydet.Size = new System.Drawing.Size(87, 35);
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // txtKasaKodu
             // 
@@ -89,6 +91,7 @@ namespace Otomasyon.Modul_kasa
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtKasaKodu.Size = new System.Drawing.Size(136, 20);
             this.txtKasaKodu.TabIndex = 1;
+            this.txtKasaKodu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtKasaKodu_ButtonClick);
             // 
             // labelControl9
             // 
@@ -106,6 +109,7 @@ namespace Otomasyon.Modul_kasa
             this.btnSil.Size = new System.Drawing.Size(87, 35);
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // labelControl6
             // 
@@ -188,13 +192,6 @@ namespace Otomasyon.Modul_kasa
             this.txtTarih.Size = new System.Drawing.Size(137, 20);
             this.txtTarih.TabIndex = 1;
             // 
-            // txtMakbuzNo
-            // 
-            this.txtMakbuzNo.Location = new System.Drawing.Point(97, 57);
-            this.txtMakbuzNo.Name = "txtMakbuzNo";
-            this.txtMakbuzNo.Size = new System.Drawing.Size(136, 20);
-            this.txtMakbuzNo.TabIndex = 1;
-            // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(0, 64);
@@ -221,23 +218,16 @@ namespace Otomasyon.Modul_kasa
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "İslem Bilgileri";
             // 
-            // groupControl1
+            // rbtCikisIslemi
             // 
-            this.groupControl1.Controls.Add(this.btnKapat);
-            this.groupControl1.Controls.Add(this.btnSil);
-            this.groupControl1.Controls.Add(this.btnKaydet);
-            this.groupControl1.Controls.Add(this.txtKasaAdi);
-            this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.txtMakbuzNo);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.txtKasaKodu);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(362, 180);
-            this.groupControl1.TabIndex = 2;
-            this.groupControl1.Text = "Kasa Cari Bilgileri";
+            this.rbtCikisIslemi.AutoSize = true;
+            this.rbtCikisIslemi.Location = new System.Drawing.Point(157, 76);
+            this.rbtCikisIslemi.Name = "rbtCikisIslemi";
+            this.rbtCikisIslemi.Size = new System.Drawing.Size(76, 17);
+            this.rbtCikisIslemi.TabIndex = 2;
+            this.rbtCikisIslemi.TabStop = true;
+            this.rbtCikisIslemi.Text = "Cikis Islemi";
+            this.rbtCikisIslemi.UseVisualStyleBackColor = true;
             // 
             // rbtGirisIslemi
             // 
@@ -250,16 +240,33 @@ namespace Otomasyon.Modul_kasa
             this.rbtGirisIslemi.Text = "Giris Islemi";
             this.rbtGirisIslemi.UseVisualStyleBackColor = true;
             // 
-            // rbtCikisIslemi
+            // groupControl1
             // 
-            this.rbtCikisIslemi.AutoSize = true;
-            this.rbtCikisIslemi.Location = new System.Drawing.Point(157, 76);
-            this.rbtCikisIslemi.Name = "rbtCikisIslemi";
-            this.rbtCikisIslemi.Size = new System.Drawing.Size(76, 17);
-            this.rbtCikisIslemi.TabIndex = 2;
-            this.rbtCikisIslemi.TabStop = true;
-            this.rbtCikisIslemi.Text = "Cikis Islemi";
-            this.rbtCikisIslemi.UseVisualStyleBackColor = true;
+            this.groupControl1.Controls.Add(this.btnKapat);
+            this.groupControl1.Controls.Add(this.btnSil);
+            this.groupControl1.Controls.Add(this.btnKaydet);
+            this.groupControl1.Controls.Add(this.txtKasaAdi);
+            this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.txtKasaKodu);
+            this.groupControl1.Controls.Add(this.txtMakbuzNo);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(362, 180);
+            this.groupControl1.TabIndex = 2;
+            this.groupControl1.Text = "Kasa Cari Bilgileri";
+            // 
+            // txtMakbuzNo
+            // 
+            this.txtMakbuzNo.Location = new System.Drawing.Point(97, 57);
+            this.txtMakbuzNo.Name = "txtMakbuzNo";
+            this.txtMakbuzNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtMakbuzNo.Size = new System.Drawing.Size(136, 20);
+            this.txtMakbuzNo.TabIndex = 1;
+            this.txtMakbuzNo.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtMakbuzNo_ButtonClick);
             // 
             // FrmKasaDevri
             // 
@@ -281,13 +288,13 @@ namespace Otomasyon.Modul_kasa
             ((System.ComponentModel.ISupportInitialize)(this.txtAcıklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarih.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarih.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMakbuzNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMakbuzNo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,11 +315,11 @@ namespace Otomasyon.Modul_kasa
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.MemoEdit txtAcıklama;
         private DevExpress.XtraEditors.DateEdit txtTarih;
-        private DevExpress.XtraEditors.TextEdit txtMakbuzNo;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.RadioButton rbtCikisIslemi;
         private System.Windows.Forms.RadioButton rbtGirisIslemi;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.ButtonEdit txtMakbuzNo;
     }
 }

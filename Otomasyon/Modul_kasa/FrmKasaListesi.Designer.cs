@@ -30,15 +30,15 @@ namespace Otomasyon.Modul_kasa
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKasaListesi));
-            this.StokBarkod = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.StokKodu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Bakiye = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.KasaKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnsil = new DevExpress.XtraEditors.SimpleButton();
             this.btnAra = new DevExpress.XtraEditors.SimpleButton();
             this.txtKasaAdi = new DevExpress.XtraEditors.TextEdit();
             this.txtKasaKodu = new DevExpress.XtraEditors.TextEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.StokAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.KasaAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.lblStokAdi = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -58,27 +58,27 @@ namespace Otomasyon.Modul_kasa
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // StokBarkod
+            // Bakiye
             // 
-            this.StokBarkod.Caption = "StokBarkod";
-            this.StokBarkod.FieldName = "StokBarkod";
-            this.StokBarkod.Name = "StokBarkod";
-            this.StokBarkod.OptionsColumn.AllowEdit = false;
-            this.StokBarkod.OptionsColumn.AllowFocus = false;
-            this.StokBarkod.OptionsColumn.FixedWidth = true;
-            this.StokBarkod.Visible = true;
-            this.StokBarkod.VisibleIndex = 2;
+            this.Bakiye.Caption = "Bakiye";
+            this.Bakiye.FieldName = "Bakiye";
+            this.Bakiye.Name = "Bakiye";
+            this.Bakiye.OptionsColumn.AllowEdit = false;
+            this.Bakiye.OptionsColumn.AllowFocus = false;
+            this.Bakiye.OptionsColumn.FixedWidth = true;
+            this.Bakiye.Visible = true;
+            this.Bakiye.VisibleIndex = 2;
             // 
-            // StokKodu
+            // KasaKodu
             // 
-            this.StokKodu.Caption = "StokKodu";
-            this.StokKodu.FieldName = "StokKodu";
-            this.StokKodu.Name = "StokKodu";
-            this.StokKodu.OptionsColumn.AllowEdit = false;
-            this.StokKodu.OptionsColumn.AllowFocus = false;
-            this.StokKodu.OptionsColumn.FixedWidth = true;
-            this.StokKodu.Visible = true;
-            this.StokKodu.VisibleIndex = 0;
+            this.KasaKodu.Caption = "KasaKodu";
+            this.KasaKodu.FieldName = "KasaKodu";
+            this.KasaKodu.Name = "KasaKodu";
+            this.KasaKodu.OptionsColumn.AllowEdit = false;
+            this.KasaKodu.OptionsColumn.AllowFocus = false;
+            this.KasaKodu.OptionsColumn.FixedWidth = true;
+            this.KasaKodu.Visible = true;
+            this.KasaKodu.VisibleIndex = 0;
             // 
             // ID
             // 
@@ -94,6 +94,7 @@ namespace Otomasyon.Modul_kasa
             this.btnsil.Size = new System.Drawing.Size(75, 39);
             this.btnsil.TabIndex = 2;
             this.btnsil.Text = "Sil";
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // btnAra
             // 
@@ -103,6 +104,7 @@ namespace Otomasyon.Modul_kasa
             this.btnAra.Size = new System.Drawing.Size(75, 39);
             this.btnAra.TabIndex = 2;
             this.btnAra.Text = "Ara";
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // txtKasaAdi
             // 
@@ -122,23 +124,23 @@ namespace Otomasyon.Modul_kasa
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ID,
-            this.StokKodu,
-            this.StokAdi,
-            this.StokBarkod});
+            this.KasaKodu,
+            this.KasaAdi,
+            this.Bakiye});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // StokAdi
+            // KasaAdi
             // 
-            this.StokAdi.Caption = "StokAdi";
-            this.StokAdi.FieldName = "StokAdi";
-            this.StokAdi.Name = "StokAdi";
-            this.StokAdi.OptionsColumn.AllowEdit = false;
-            this.StokAdi.OptionsColumn.AllowFocus = false;
-            this.StokAdi.OptionsColumn.FixedWidth = true;
-            this.StokAdi.Visible = true;
-            this.StokAdi.VisibleIndex = 1;
+            this.KasaAdi.Caption = "KasaAdi";
+            this.KasaAdi.FieldName = "KasaAdi";
+            this.KasaAdi.Name = "KasaAdi";
+            this.KasaAdi.OptionsColumn.AllowEdit = false;
+            this.KasaAdi.OptionsColumn.AllowFocus = false;
+            this.KasaAdi.OptionsColumn.FixedWidth = true;
+            this.KasaAdi.Visible = true;
+            this.KasaAdi.VisibleIndex = 1;
             // 
             // gridControl1
             // 
@@ -150,6 +152,7 @@ namespace Otomasyon.Modul_kasa
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // lblStokAdi
             // 
@@ -238,15 +241,15 @@ namespace Otomasyon.Modul_kasa
 
         #endregion
 
-        private DevExpress.XtraGrid.Columns.GridColumn StokBarkod;
-        private DevExpress.XtraGrid.Columns.GridColumn StokKodu;
+        private DevExpress.XtraGrid.Columns.GridColumn Bakiye;
+        private DevExpress.XtraGrid.Columns.GridColumn KasaKodu;
         private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraEditors.SimpleButton btnsil;
         private DevExpress.XtraEditors.SimpleButton btnAra;
         private DevExpress.XtraEditors.TextEdit txtKasaAdi;
         private DevExpress.XtraEditors.TextEdit txtKasaKodu;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn StokAdi;
+        private DevExpress.XtraGrid.Columns.GridColumn KasaAdi;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraEditors.LabelControl lblStokAdi;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;

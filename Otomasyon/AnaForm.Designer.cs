@@ -49,6 +49,12 @@ namespace Otomasyon
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnSatisFaturasi = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnSatisIadeFaturasi = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnAlisFaturasi = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnAlisIadeFaturasi = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnAlisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnSatisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -57,17 +63,11 @@ namespace Otomasyon
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barbtnSatisFaturasi = new DevExpress.XtraBars.BarButtonItem();
-            this.barbtnSatisIadeFaturasi = new DevExpress.XtraBars.BarButtonItem();
-            this.barbtnAlisFaturasi = new DevExpress.XtraBars.BarButtonItem();
-            this.barbtnAlisIadeFaturasi = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barbtnAlisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
-            this.barbtnSatisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Kasa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -228,6 +228,7 @@ namespace Otomasyon
             this.barButtonItem1.Id = 14;
             this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -235,6 +236,7 @@ namespace Otomasyon
             this.barButtonItem2.Id = 15;
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -242,6 +244,7 @@ namespace Otomasyon
             this.barButtonItem3.Id = 16;
             this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -249,6 +252,55 @@ namespace Otomasyon
             this.barButtonItem4.Id = 17;
             this.barButtonItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
+            // barbtnSatisFaturasi
+            // 
+            this.barbtnSatisFaturasi.Caption = "Satis Faturasi";
+            this.barbtnSatisFaturasi.Id = 18;
+            this.barbtnSatisFaturasi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnSatisFaturasi.ImageOptions.Image")));
+            this.barbtnSatisFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnSatisFaturasi.ImageOptions.LargeImage")));
+            this.barbtnSatisFaturasi.Name = "barbtnSatisFaturasi";
+            // 
+            // barbtnSatisIadeFaturasi
+            // 
+            this.barbtnSatisIadeFaturasi.Caption = "Satis Iade Faturasi";
+            this.barbtnSatisIadeFaturasi.Id = 19;
+            this.barbtnSatisIadeFaturasi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnSatisIadeFaturasi.ImageOptions.Image")));
+            this.barbtnSatisIadeFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnSatisIadeFaturasi.ImageOptions.LargeImage")));
+            this.barbtnSatisIadeFaturasi.Name = "barbtnSatisIadeFaturasi";
+            // 
+            // barbtnAlisFaturasi
+            // 
+            this.barbtnAlisFaturasi.Caption = "Alis Faturasi";
+            this.barbtnAlisFaturasi.Id = 20;
+            this.barbtnAlisFaturasi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnAlisFaturasi.ImageOptions.Image")));
+            this.barbtnAlisFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnAlisFaturasi.ImageOptions.LargeImage")));
+            this.barbtnAlisFaturasi.Name = "barbtnAlisFaturasi";
+            // 
+            // barbtnAlisIadeFaturasi
+            // 
+            this.barbtnAlisIadeFaturasi.Caption = "Alis Iade Faturasi";
+            this.barbtnAlisIadeFaturasi.Id = 21;
+            this.barbtnAlisIadeFaturasi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnAlisIadeFaturasi.ImageOptions.Image")));
+            this.barbtnAlisIadeFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnAlisIadeFaturasi.ImageOptions.LargeImage")));
+            this.barbtnAlisIadeFaturasi.Name = "barbtnAlisIadeFaturasi";
+            // 
+            // barbtnAlisIrsaliyesi
+            // 
+            this.barbtnAlisIrsaliyesi.Caption = "Alis Irsaliyesi";
+            this.barbtnAlisIrsaliyesi.Id = 22;
+            this.barbtnAlisIrsaliyesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnAlisIrsaliyesi.ImageOptions.Image")));
+            this.barbtnAlisIrsaliyesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnAlisIrsaliyesi.ImageOptions.LargeImage")));
+            this.barbtnAlisIrsaliyesi.Name = "barbtnAlisIrsaliyesi";
+            // 
+            // barbtnSatisIrsaliyesi
+            // 
+            this.barbtnSatisIrsaliyesi.Caption = "Satis Irsaliyesi";
+            this.barbtnSatisIrsaliyesi.Id = 23;
+            this.barbtnSatisIrsaliyesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnSatisIrsaliyesi.ImageOptions.Image")));
+            this.barbtnSatisIrsaliyesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnSatisIrsaliyesi.ImageOptions.LargeImage")));
+            this.barbtnSatisIrsaliyesi.Name = "barbtnSatisIrsaliyesi";
             // 
             // ribbonPage1
             // 
@@ -319,18 +371,6 @@ namespace Otomasyon
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "ribbonPageGroup4";
             // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 425);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.Kasa;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(718, 24);
-            // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
             // ribbonPage5
             // 
             this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -349,38 +389,6 @@ namespace Otomasyon
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "FATURA ISLEMLERI";
             // 
-            // barbtnSatisFaturasi
-            // 
-            this.barbtnSatisFaturasi.Caption = "Satis Faturasi";
-            this.barbtnSatisFaturasi.Id = 18;
-            this.barbtnSatisFaturasi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnSatisFaturasi.ImageOptions.Image")));
-            this.barbtnSatisFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnSatisFaturasi.ImageOptions.LargeImage")));
-            this.barbtnSatisFaturasi.Name = "barbtnSatisFaturasi";
-            // 
-            // barbtnSatisIadeFaturasi
-            // 
-            this.barbtnSatisIadeFaturasi.Caption = "Satis Iade Faturasi";
-            this.barbtnSatisIadeFaturasi.Id = 19;
-            this.barbtnSatisIadeFaturasi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnSatisIadeFaturasi.ImageOptions.Image")));
-            this.barbtnSatisIadeFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnSatisIadeFaturasi.ImageOptions.LargeImage")));
-            this.barbtnSatisIadeFaturasi.Name = "barbtnSatisIadeFaturasi";
-            // 
-            // barbtnAlisFaturasi
-            // 
-            this.barbtnAlisFaturasi.Caption = "Alis Faturasi";
-            this.barbtnAlisFaturasi.Id = 20;
-            this.barbtnAlisFaturasi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnAlisFaturasi.ImageOptions.Image")));
-            this.barbtnAlisFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnAlisFaturasi.ImageOptions.LargeImage")));
-            this.barbtnAlisFaturasi.Name = "barbtnAlisFaturasi";
-            // 
-            // barbtnAlisIadeFaturasi
-            // 
-            this.barbtnAlisIadeFaturasi.Caption = "Alis Iade Faturasi";
-            this.barbtnAlisIadeFaturasi.Id = 21;
-            this.barbtnAlisIadeFaturasi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnAlisIadeFaturasi.ImageOptions.Image")));
-            this.barbtnAlisIadeFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnAlisIadeFaturasi.ImageOptions.LargeImage")));
-            this.barbtnAlisIadeFaturasi.Name = "barbtnAlisIadeFaturasi";
-            // 
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.barbtnAlisIrsaliyesi);
@@ -388,21 +396,17 @@ namespace Otomasyon
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "IRSALIYE ISLEMLERI";
             // 
-            // barbtnAlisIrsaliyesi
+            // ribbonStatusBar
             // 
-            this.barbtnAlisIrsaliyesi.Caption = "Alis Irsaliyesi";
-            this.barbtnAlisIrsaliyesi.Id = 22;
-            this.barbtnAlisIrsaliyesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnAlisIrsaliyesi.ImageOptions.Image")));
-            this.barbtnAlisIrsaliyesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnAlisIrsaliyesi.ImageOptions.LargeImage")));
-            this.barbtnAlisIrsaliyesi.Name = "barbtnAlisIrsaliyesi";
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 425);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.Kasa;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(718, 24);
             // 
-            // barbtnSatisIrsaliyesi
+            // xtraTabbedMdiManager1
             // 
-            this.barbtnSatisIrsaliyesi.Caption = "Satis Irsaliyesi";
-            this.barbtnSatisIrsaliyesi.Id = 23;
-            this.barbtnSatisIrsaliyesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnSatisIrsaliyesi.ImageOptions.Image")));
-            this.barbtnSatisIrsaliyesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnSatisIrsaliyesi.ImageOptions.LargeImage")));
-            this.barbtnSatisIrsaliyesi.Name = "barbtnSatisIrsaliyesi";
+            this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // AnaForm
             // 
